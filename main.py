@@ -6,10 +6,10 @@ from engine import *  ### Импорт класса engine
 
 def main():
   
-  BB = [Ball(0, 0, 50), Ball(10, 10, 50)]
+  BB = [Ball(0, 0, 50), Ball(0, 0, 10)]
   DR = Draw()
   DR.setColor("Black")
-  DR.setPenSize(2)
+  DR.setPenSize(5)
 
   AN = Anim(DR, BB)
   

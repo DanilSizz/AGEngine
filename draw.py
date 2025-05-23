@@ -9,6 +9,14 @@ class Draw:
     self.display = display.Display(500, 500, 60)
     self.display.screen.tracer(0)
 
+  def setNet(self):
+    y = self.display.screen.window_height()
+    x = self.display.screen.window_width()
+    self.teleport(-x // 2, 0)
+    self.t.goto(x // 2, 0)
+    self.teleport(0, -y // 2)
+    self.t.goto(0, y // 2)
+
   def setColor(self, color = "BLACK"):
     self.t.color(color)
 
@@ -25,7 +33,7 @@ class Draw:
     if (fill):
       self.t.begin_fill()
       
-    self.teleport(ball.x, ball.y - ball.radius / 2)
+    self.teleport(ball.x, ball.y - ball.radius)
     self.t.circle(ball.radius)
 
     if (fill):
