@@ -23,7 +23,7 @@ class Engine:
         i = 0
         while True:
 
-            self.renderer.update(self.object[0])
+            self.renderer.update_animations()
       
             elapsed_time = time.time() - self.time
   
@@ -31,7 +31,7 @@ class Engine:
                 time.sleep(self.interval - elapsed_time)
 
             i = i + 1
-            print(i)
+            #print(i)
 
 
     
